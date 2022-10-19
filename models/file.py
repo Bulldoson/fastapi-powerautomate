@@ -18,7 +18,7 @@ class FileSchema(BaseModel):
 
 class UpdateStudentModel(BaseModel):
     filename: Optional[str]
-    filecontent: Optional[EmailStr]
+    filecontent: Optional[str]
 
     class Config:
         schema_extra = {
