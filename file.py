@@ -13,7 +13,7 @@ from models.file import (
 
 router = APIRouter()
 
-@router.post("/", response_description="File data added into the database")
+@router.post("/file", response_description="File data added into the database")
 async def add_file_data(file: FileSchema = Body(...)):
     file = jsonable_encoder(file)
     new_file = await add_file(file)
